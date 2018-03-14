@@ -22,6 +22,35 @@ var articleone={
 };
 
 
+var articletwo={
+    title:'Article Two|Srinjoy',
+    heading:'Article Two',
+    content:`
+            <p>
+                Whenever you see a successful person you only see the public glories, never the private sacrifices to reach them.
+                Vaibhav Shah
+            </p>
+            <p>
+                The road to success and the road to failure are almost exactly the same.
+                Colin R. Davis
+            </p>`
+};
+
+
+var articlethree={
+    title:'Article Three|Srinjoy',
+    heading:'Article Three',
+    content:`<p>
+               Keep on going, and the chances are that you will stumble on something, perhaps when you are least expecting it.
+               Charles F. Kettering
+            </p>
+            <p>
+                The road to success and the road to failure are almost exactly the same.
+                Colin R. Davis
+            </p>`
+                
+};
+
 function createtemplate (data) {
     var title=data.title;
     var heading=data.heading;
@@ -61,11 +90,11 @@ app.get('/article-one',function(req,res){
 });
 
 app.get('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+    res.sendsend(createtemplate(articletwo));
 });
 
 app.get('/article-three',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+   res.sendsend(createtemplate(articlethree));
 });
 
 app.get('/ui/style.css', function (req, res) {
