@@ -13,7 +13,7 @@ app.get('/article-one',function(req,res){
    res.send('Article one will be served here') ;
 });
 
-app.get('/article-one',function(req,res){
+app.get('/article-two',function(req,res){
    res.send('Article on two will be served here') ;
 });
 
