@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles={
-    articleone={
+    articleone:{
     title:'Article One|Srinjoy',
     heading:'Article One',
     content:`
@@ -19,10 +19,10 @@ var articles={
                     The road to success and the road to failure are almost exactly the same.
                     Colin R. Davis
                 </p>`
-};
+},
 
 
-    articletwo={
+    articletwo:{
     title:'Article Two|Srinjoy',
     heading:'Article Two',
     content:`
@@ -37,7 +37,7 @@ var articles={
 },
 
 
-    articlethree={
+    articlethree:{
     title:'Article Three|Srinjoy',
     heading:'Article Three',
     content:`<p>
