@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles={
-    articleone:{
+    article_one :{
     title:'Article One|Srinjoy',
     heading:'Article One',
     content:`
@@ -22,7 +22,7 @@ var articles={
 },
 
 
-    articletwo:{
+    article_two:{
     title:'Article Two|Srinjoy',
     heading:'Article Two',
     content:`
@@ -37,7 +37,7 @@ var articles={
 },
 
 
-    articlethree:{
+    article_three:{
     title:'Article Three|Srinjoy',
     heading:'Article Three',
     content:`<p>
@@ -52,7 +52,7 @@ var articles={
 }
 
 };
-function createtemplate (data) {
+function createtemplate(data) {
     var title=data.title;
     var heading=data.heading;
     var content=data.content;
