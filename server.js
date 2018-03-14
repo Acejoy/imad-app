@@ -6,8 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-
-var articleone={
+var articles={
+    articleone={
     title:'Article One|Srinjoy',
     heading:'Article One',
     content:`
@@ -22,7 +22,7 @@ var articleone={
 };
 
 
-var articletwo={
+    articletwo={
     title:'Article Two|Srinjoy',
     heading:'Article Two',
     content:`
@@ -34,10 +34,10 @@ var articletwo={
                 The road to success and the road to failure are almost exactly the same.
                 Colin R. Davis
             </p>`
-};
+},
 
 
-var articlethree={
+    articlethree={
     title:'Article Three|Srinjoy',
     heading:'Article Three',
     content:`<p>
@@ -49,8 +49,9 @@ var articlethree={
                 Colin R. Davis
             </p>`
                 
-};
+}
 
+};
 function createtemplate (data) {
     var title=data.title;
     var heading=data.heading;
@@ -85,16 +86,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-   res.send(createtemplate(articleone));
-});
-
-app.get('/article-two',function(req,res){
-    res.sendsend(createtemplate(articletwo));
-});
-
-app.get('/article-three',function(req,res){
-   res.sendsend(createtemplate(articlethree));
+app.get('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
+   res.send(createtemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
