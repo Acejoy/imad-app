@@ -12,6 +12,7 @@ img.onclick= function () {
     
 };
 
+var counter=0;
 var count=document.getElementById('counter');
 button.onclick= function () {
     counter=counter+1;
