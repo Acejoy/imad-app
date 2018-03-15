@@ -34,8 +34,7 @@
  };
  
  
- var nameInput=document.getElementById('name');
- var name=nameInput.value;
+ 
  var submit=document.getElementById('submit_btn');
  submit.onclick= function () {
       var request=new  XMLHttpRequest();
@@ -54,6 +53,8 @@
          }
          
      } ;
+     var nameInput=document.getElementById('name');
+     var name=nameInput.value;
      
      request.open('GET','http://crazymukh.imad.hasura-app.io/submit-name?name='+name,true);
      request.send(null);
