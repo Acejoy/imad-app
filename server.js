@@ -95,8 +95,8 @@ app.get('/counter', function (req,res){
 
 var nk=[];
 app.get('/submit-name' , function(req,res){
-   var name=req.query.name;
-   nk.push(name);
+   var name=req.query.nu;
+   nk.push(nu);
    res.send(JSON.stringify(nk));
 });
 
